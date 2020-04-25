@@ -1,0 +1,24 @@
+// Indique os valores de W12 que levam a que os saltos seguintes sejam tomados:
+
+a)  CMP  W12, #0C90h
+    B.EQ destino
+    
+    W12 = #0C90h
+    
+    
+b)  EOR  W12, W12, W12
+    CBNZ W12, destino
+    
+    O salto nunca é tomado
+    
+    
+c)  CMP  W12, #0100h
+    B.HI destino
+    
+    W12 > #0100h  (desde que W12 seja positivo)
+    
+
+d)  CMP  W12, #0100h
+    B.GT destino
+    
+    W12 > #0100h
